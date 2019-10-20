@@ -18,7 +18,7 @@ const methodOverride = require('method-override')
  *
  */
 const { wordsRouter } = require('./controllers/words.js')
-
+const { picturesRouter } = require('./controllers/pictures.js')
 
 /* Step 3
  *
@@ -62,6 +62,7 @@ app.set('view engine', 'hbs')
  * the paths defined in the router.
  */
 app.use('/', wordsRouter)
+app.use('/', picturesRouter)
 
 /* Step 5
  *
