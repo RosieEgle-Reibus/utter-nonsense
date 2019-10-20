@@ -1,12 +1,5 @@
 const mongoose = require('./connection.js')
 
-
-/* Step 2
- *
- * TODO: create model schema 
- * NOTE: skip this if you are not using mongoose
- *
- */
 const WordSchema = new mongoose.Schema({
   mammal: String,
   object: String,
@@ -44,11 +37,6 @@ const deleteWord = (id) => {
   return wordCollection.deleteOne({_id: id})
 }
 
-/* Step 5
- *
- * TODO: export all functions from this file by adding their names as keys to this
- * object
- */
 module.exports = {
   getAllWords,
   getOneWord,
