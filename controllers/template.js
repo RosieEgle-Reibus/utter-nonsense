@@ -48,3 +48,24 @@ templateRouter.get('/', (req, res) => {
 module.exports = {
   templateRouter
 }
+
+// Words to place in the paragraph/story
+// const wordsSchema {
+//   mammal: String,
+//   object: String,
+//   verb: String,
+//   adjective: String,
+//   number: Number
+// }
+// Pictures- the user will paste the url in and the images will become the illustrations for the story
+// const pictureSchema {
+//   destination: String,
+//   mammal: String,
+//   object: String,
+//   dateTaken: Date,
+// }
+// Theme will be a drop down that will select between three different stories/paragraphs to insert the above data into
+// const themeSchema {
+//   type: String,
+//   enum: ['Nature', 'Breakfast', 'Murder-y' ]
+// }
