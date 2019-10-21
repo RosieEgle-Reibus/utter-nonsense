@@ -18,7 +18,8 @@ themesRouter.get('/theme', (req, res) => {
 themesRouter.get('/theme/:id', (req, res) => {
     themesApi.getOneTheme(req.params.id)
     .then((singleTheme) => {
-        res.json(singleTheme)
+        //res.json(singleTheme)
+        res.render('themes/singleTheme', singleTheme)
     })
 })
 
