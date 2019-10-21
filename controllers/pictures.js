@@ -4,6 +4,12 @@ const picturesApi = require('../models/pictures.js')
 
 const picturesRouter = express.Router()
 
+//get Create Picture Set Form
+picturesRouter.get('/picture/new', (req, res) =>{
+        res.render('pictures/createPictureSet')
+})
+
+
 //getAll
 picturesRouter.get('/picture', (req, res) => {
     picturesApi.getAllPictures()
@@ -23,10 +29,11 @@ picturesRouter.get('/picture/:id', (req, res) => {
 })
 
 //create
-picturesRouter.post('/picture/new', (req, res) => {
+picturesRouter.post('/picture', (req, res) => {
     picturesApi.createPicture(req.body)
     .then((createdPicture) => {
-        res.json(createdPicture)
+        // res.json(createdPicture)
+        res.redirect(`/picture/${createdPicture._id}`)
     })
 })
 
