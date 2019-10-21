@@ -20,6 +20,7 @@ const methodOverride = require('method-override')
 const { wordsRouter } = require('./controllers/words.js')
 const { picturesRouter } = require('./controllers/pictures.js')
 const { themesRouter } = require('./controllers/themes.js')
+const { outputRouter } = require('./controllers/output.js')
 
 
 /* Step 3
@@ -66,6 +67,7 @@ app.set('view engine', 'hbs')
 app.use('/', wordsRouter)
 app.use('/', picturesRouter)
 app.use('/', themesRouter)
+app.use('/', outputRouter)
 
 /* Step 5
  *
