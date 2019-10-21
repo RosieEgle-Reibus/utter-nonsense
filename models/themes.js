@@ -1,7 +1,8 @@
 const mongoose = require('./connection.js')
 
 const ThemeSchema = new mongoose.Schema({
- theme: String
+ dropDownTheme: String,
+ writeInTheme: String
 })
 
 const themeCollection = mongoose.model('Theme', ThemeSchema)

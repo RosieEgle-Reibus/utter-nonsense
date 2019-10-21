@@ -9,7 +9,8 @@ const themesRouter = express.Router()
 themesRouter.get('/theme', (req, res) => {
     themesApi.getAllThemes()
     .then((allThemes) => {
-        res.json(allThemes)
+        //res.json(allThemes)
+        res.render('themes/allThemes', {allThemes})
     })
 })
 
