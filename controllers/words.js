@@ -9,7 +9,8 @@ const wordsRouter = express.Router()
 wordsRouter.get('/word', (req, res) => {
   wordsApi.getAllWords()
   .then((allWords) => {
-    res.json(allWords)
+    // res.json(allWords)
+    res.render('words/allWords', {allWords})
   })
 })
 
