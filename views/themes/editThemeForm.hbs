@@ -1,0 +1,14 @@
+<h1>Change Current Theme</h1>
+
+<form action="/theme/edit/{{_id}}?_method=PUT" method="POST">
+<select name="dropDownTheme">
+    <option value="{{dropDownTheme}}">{{dropDownTheme}}</option>
+    <option></option>
+    <option value="Nature">Nature</option>
+    <option value="Breakfast">Breakfast</option>
+    <option value="Murder-y">Murder-y</option>
+</select>
+<p>Or change your own theme</p>
+<input type="text" name="writeInTheme" placeholder="Make up your own theme" value="{{writeInTheme}}"/>
+<input type="submit" value="Change Theme"/>
+</form>

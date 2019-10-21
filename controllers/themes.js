@@ -37,11 +37,20 @@ themesRouter.post('/theme', (req, res) => {
     })
 })
 
+//get editTheme Form
+themesRouter.get('/theme/edit/:id', (req, res) => {
+    themesApi.getOneTheme(req.params.id)
+    .then((singleTheme) => {
+        res.render('themes/editThemeForm', singleTheme)
+    })
+})
+
 //update
 themesRouter.put('/theme/edit/:id', (req, res) => {
     themesApi.updateTheme(req.params.id, req.body)
     .then((updatedTheme) => {
-        res.json(updatedTheme)
+        //res.json(updatedTheme)
+        res.redirect(`/theme/${req.params.id}`)
     })
 })
 
