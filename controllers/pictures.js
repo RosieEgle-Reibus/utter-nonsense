@@ -58,7 +58,8 @@ picturesRouter.put('/picture/edit/:id', (req, res) => {
 picturesRouter.delete('/picture/:id', (req, res) => {
     picturesApi.deletePicture(req.params.id)
     .then((deletedPicture) => {
-        res.json(deletedPicture)
+        //res.json(deletedPicture)
+        res.redirect('/picture')
     })
 })
 

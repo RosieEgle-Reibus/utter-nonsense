@@ -1,5 +1,5 @@
 <h1>Edit Picture Set</h1>
-<form action="/picture" method="POST">
+<form action="/picture/edit/{{_id}}?_method=PUT" method="POST">
 <input type="text" name="set" placeholder="Name Your Set" value="{{set}}"/>
 <input type="text" name="destination" placeholder="Any place you can think of" value="{{destination}}"/>
 <input type="text" name="mammal" placeholder="Any mammal you can think of" value="{{mammal}}"/>
