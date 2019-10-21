@@ -5,6 +5,12 @@ const wordsApi = require('../models/words.js')
 
 const wordsRouter = express.Router()
 
+//getCreateForm
+wordsRouter.get('/word/new', (req, res) => {
+  res.render('words/createSet')
+})
+
+
 //getAll
 wordsRouter.get('/word', (req, res) => {
   wordsApi.getAllWords()
@@ -24,10 +30,10 @@ wordsRouter.get('/word/:id', (req, res) => {
 })
 
 //createOne 
-wordsRouter.post('/word/new', (req, res) => {
+wordsRouter.post('/word', (req, res) => {
   wordsApi.createWord(req.body)
   .then((createdWord) => {
-    res.json(createdWord)
+    res.redirect(`/word/${createdWord._id}`)
   })
 })
 
