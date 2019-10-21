@@ -17,7 +17,8 @@ picturesRouter.get('/picture', (req, res) => {
 picturesRouter.get('/picture/:id', (req, res) => {
     picturesApi.getOnePicture(req.params.id)
     .then((singlePicture) => {
-        res.json(singlePicture)
+        //res.json(singlePicture)
+        res.render('pictures/singlePictureSet', singlePicture)
     })
 })
 
