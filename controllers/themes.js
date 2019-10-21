@@ -58,7 +58,8 @@ themesRouter.put('/theme/edit/:id', (req, res) => {
 themesRouter.delete('/theme/:id', (req, res) => {
     themesApi.deleteTheme(req.params.id)
     .then((deletedTheme) => {
-        res.json(deletedTheme)
+        //res.json(deletedTheme)
+        res.redirect('/theme')
     })
 })
 
