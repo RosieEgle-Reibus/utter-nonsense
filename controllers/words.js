@@ -49,7 +49,8 @@ wordsRouter.put('/word/edit/:id', (req, res) => {
 wordsRouter.delete('/word/:id', (req, res) => {
   wordsApi.deleteWord(req.params.id)
   .then((deletedWord) => {
-    res.json(deletedWord)
+    //res.json(deletedWord)
+    res.redirect('/word')
   })
 })
 
