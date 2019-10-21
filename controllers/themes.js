@@ -4,6 +4,11 @@ const themesApi = require('../models/themes.js')
 
 const themesRouter = express.Router()
 
+//get CreateTheme Form
+themesRouter.get('/theme/new', (req, res) => {
+    res.render('themes/createThemeForm')
+})
+
 
 //getAll
 themesRouter.get('/theme', (req, res) => {
@@ -24,10 +29,11 @@ themesRouter.get('/theme/:id', (req, res) => {
 })
 
 //create
-themesRouter.post('/theme/new', (req, res) => {
+themesRouter.post('/theme', (req, res) => {
     themesApi.createTheme(req.body)
     .then((createdTheme) => {
-        res.json(createdTheme)
+        //res.json(createdTheme)
+        res.redirect(`/theme/${createdTheme._id}`)
     })
 })
 
