@@ -1,0 +1,10 @@
+<h1>Edit Word Set</h1>
+<form action="/word/edit/{{_id}}?_method=PUT" method="POST">
+<input type="text" name="set" placeholder="Name this set of words" value="{{set}}"/>
+<input type="text" name="mammal" placeholder="Any mammal you can think of" value="{{mammal}}"/>
+<input type="text" name="object" placeholder="Any object you can think of" value="{{object}}"/>
+<input type="text" name="verb" placeholder="Past tense verb" value="{{verb}}"/>
+<input type="text" name="adjective" placeholder="Any adjective you can think of" value="{{adjective}}"/>
+<input type="number" name="number" placeholder="Any number you can think of" value="{{number}}"/>
+<input type="submit" value="Edit Set"/>
+</form>

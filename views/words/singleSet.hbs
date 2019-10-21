@@ -8,6 +8,11 @@
 <p>Adjective: {{adjective}}</p>
 <p>Number: {{number}}</p>
 
+
+<a href="/word/edit/{{_id}}">
+<button>Edit Word Set</button>
+</a>
+
 <form action="/word/{{_id}}?_method=DELETE" method="POST">
 <input type="submit" value="Delete Word Set"/>
 </form>

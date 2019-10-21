@@ -37,11 +37,19 @@ wordsRouter.post('/word', (req, res) => {
   })
 })
 
+//getEditForm
+wordsRouter.get('/word/edit/:id', (req, res) => {
+  wordsApi.getOneWord(req.params.id)
+  .then((singleWord) => {
+    res.render('words/editSetForm', singleWord)
+  })
+})
+
 //updateOne
 wordsRouter.put('/word/edit/:id', (req, res) => {
   wordsApi.updateWord(req.params.id, req.body)
   .then((updatedWord) => {
-    res.json(updatedWord)
+    res.redirect(`/word/${req.params.id}`)
   })
 })
 
