@@ -31,19 +31,44 @@ const outputRouter = express.Router()
 //         })
     
 // })
-
+// outputRouter.get('/output', (req, res) => {
+//     Promise.all([
+//         wordsApi.getAllWords(),
+//         picturesApi.getAllPictures()
+//     ])
+//     .then(allWordsAndPics => {
+//         res.json(
+//             allWordsAndPics[1].values()
+//         )
+//     })
+// })
+// outputRouter.get('/output', (req, res) => {
+//     Promise.all([
+//         wordsApi.getAllWords(),
+//         picturesApi.getAllPictures()
+//     ])
+//     .then(([allWords, allPictures]) => {
+//         res.json({
+//             allWords: allWords[0].mammal,
+//             allPictures
+//         })
+//     })
+// })
 outputRouter.get('/output', (req, res) => {
     Promise.all([
         wordsApi.getAllWords(),
         picturesApi.getAllPictures()
     ])
     .then(([allWords, allPictures]) => {
-        res.json({
-            allWords,
-            allPictures
-        })
+        res.json([
+            allWords[0].object,
+            allPictures[0].mammal
+        ])
     })
 })
+
+
+//{{allWordsAndPics[0].mammal}}
 
 
 
