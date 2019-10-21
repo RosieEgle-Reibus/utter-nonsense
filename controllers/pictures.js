@@ -8,7 +8,8 @@ const picturesRouter = express.Router()
 picturesRouter.get('/picture', (req, res) => {
     picturesApi.getAllPictures()
     .then((allPictures) => {
-        res.json(allPictures)
+        //res.json(allPictures)
+        res.render('pictures/allPictureSets', {allPictures})
     })
 })
 

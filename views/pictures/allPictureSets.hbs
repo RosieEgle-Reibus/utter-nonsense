@@ -1,0 +1,17 @@
+<h1>All Picture Sets</h1>
+
+{{#each allPictures}}
+<a href="/picture/{{_id}}">
+<p>{{set}}</p>
+</a>
+<p>Destination: 
+<img src="{{destination}}"/> 
+</p>
+<p>Mammal
+ <img src="{{mammal}}"/>   
+</p>
+<p>Object:
+<img src="{{object}}"/> 
+</p>
+<p>Date Taken: {{dateTaken}}</p>
+{{/each}}

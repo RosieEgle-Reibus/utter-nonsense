@@ -1,6 +1,7 @@
 const mongoose = require('./connection.js')
 
 const PictureSchema = new mongoose.Schema({
+    set: String,
     destination: String,
     mammal: String,
     object: String,
