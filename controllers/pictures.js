@@ -37,11 +37,20 @@ picturesRouter.post('/picture', (req, res) => {
     })
 })
 
+//get editPictureSet Form
+picturesRouter.get('/picture/edit/:id', (req, res) => {
+    picturesApi.getOnePicture(req.params.id)
+    .then((singlePicture) => {
+        res.render('pictures/editPictureSet', singlePicture)
+    })
+})
+
 //update
 picturesRouter.put('/picture/edit/:id', (req, res) => {
     picturesApi.updatePicture(req.params.id, req.body)
     .then((updatedPicture) => {
-        res.json(updatedPicture)
+        //res.json(updatedPicture)
+        res.redirect(`/picture/${req.params.id}`)
     })
 })
 
