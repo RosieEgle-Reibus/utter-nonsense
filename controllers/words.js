@@ -18,7 +18,8 @@ wordsRouter.get('/word', (req, res) => {
 wordsRouter.get('/word/:id', (req, res) => {
   wordsApi.getOneWord(req.params.id)
   .then((singleWord) => {
-    res.json(singleWord)
+    //res.json(singleWord)
+    res.render('words/singleSet', singleWord)
   })
 })
 
