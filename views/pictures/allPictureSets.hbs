@@ -1,20 +1,40 @@
 <h1>All Picture Sets</h1>
 
-{{#each allPictures}}
-<a href="/picture/{{_id}}">
-<p>{{set}}</p>
+<a href="/picture/new">
+<button>Create New Picture Set</button>
 </a>
-<p>Destination: 
-<img src="{{destination}}"/> 
-</p>
-<p>Mammal
- <img src="{{mammal}}"/>   
-</p>
-<p>Object:
-<img src="{{object}}"/> 
-</p>
+<div class="main-container">
+{{#each allPictures}}
+<a href="/picture/{{_id}}">{{set}}</a>
+{{/each}}
+<h2>Destination:</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each allPictures}}
+<img src="{{destination}}">
+{{/each}}
+</div>
+</div>
+<h2>Object:</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each allPictures}}
+<img src="{{object}}">
+{{/each}}
+</div>
+</div>
+<h2>Mammal:</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each allPictures}}
+<img src="{{mammal}}">
+{{/each}}
+</div>
+</div>
+{{#each allPictures}}
 <p>Date Taken: {{dateTaken}}</p>
 {{/each}}
+</div>
 
 <a href="/picture/new">
 <button>Create New Picture Set</button>

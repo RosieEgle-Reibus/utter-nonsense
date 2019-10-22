@@ -3,16 +3,33 @@
 <button>All Picture Sets</button>
 </a>
 
-<p>Destination: 
-<img src="{{destination}}"/> 
-</p>
-<p>Mammal
- <img src="{{mammal}}"/>   
-</p>
-<p>Object:
-<img src="{{object}}"/> 
-</p>
+<div class="main-container">
+
+<h2>Destination:</h2>
+<div class="img-container">
+<div class="polaroid">
+<img src="{{destination}}">
+</div>
+</div>
+<h2>Object:</h2>
+<div class="img-container">
+<div class="polaroid">
+<img src="{{object}}">
+</div>
+</div>
+<h2>Mammal:</h2>
+<div class="img-container">
+<div class="polaroid">
+<img src="{{mammal}}">
+</div>
+</div>
 <p>Date Taken: {{dateTaken}}</p>
+</div>
+
+
+
+
+
 
 <a href="/picture/edit/{{_id}}">
 <button>Edit Picture Set</button>
