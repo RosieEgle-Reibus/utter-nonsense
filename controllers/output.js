@@ -69,6 +69,10 @@ const outputRouter = express.Router()
 //     })
 // })
 
+// outputRouter.get('/', (req, res) => {
+//     res.render('output/createAllSchemasForm')
+// })
+
 outputRouter.get('/output', (req, res) => {
     Promise.all([
         wordsApi.getAllWords(),
@@ -79,6 +83,19 @@ outputRouter.get('/output', (req, res) => {
         res.render('output/output', {allWords, allPictures})
     })
 })
+
+// outputRouter.post('/output', (req, res) => {
+//     Promise.all([
+//         wordsApi.createWord(req.body),
+//         picturesApi.createPicture(req.body),
+//         themesApi.createTheme(req.body)
+//     ])
+//     .then(([createdWord, createdPicture, createdTheme]) => {
+//         res.redirect('/output')
+//     })
+// })
+
+
 
 
 

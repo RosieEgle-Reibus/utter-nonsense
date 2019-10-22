@@ -1,9 +1,9 @@
 const mongoose = require('./connection.js')
 
 const WordSchema = new mongoose.Schema({
-  set: String,
-  mammal: String,
-  object: String,
+  setWord: String,
+  animal: String,
+  thing: String,
   verb: String,
   adjective: String,
   number: Number

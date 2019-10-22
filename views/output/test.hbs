@@ -1,0 +1,49 @@
+
+<h1>Words</h1>
+{{#each createdWord}}
+<p>Mammal: {{mammal}}</p>
+<p>Object: {{object}}</p>
+<p>Verb: {{verb}}</p>
+<p>Adjective: {{adjective}}</p>
+<p>Number: {{number}}</p>
+{{/each}}
+
+<h1>Pictures</h1>
+<div class="main-container">
+{{#each createdPicture}}
+<a href="/picture/{{_id}}">{{set}}</a>
+{{/each}}
+<h2>Destination:</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each createdPicture}}
+<img src="{{destination}}">
+{{/each}}
+</div>
+</div>
+<h2>Object:</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each createdPicture}}
+<img src="{{object}}">
+{{/each}}
+</div>
+</div>
+<h2>Mammal:</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each createdPicture}}
+<img src="{{mammal}}">
+{{/each}}
+</div>
+</div>
+{{#each createdPicture}}
+<p>Date Taken: {{dateTaken}}</p>
+{{/each}}
+</div>
+
+<h1>Theme</h1>
+{{#each createdTheme}}
+<p>{{dropDownTheme}}</p>
+<p>{{writeInTheme}}</p>
+{{/each}}
