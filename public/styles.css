@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+}
+.main-container {
+    width: 50%; 
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.polaroid {
+    max-width: 65%;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    border: 1px solid rgb(128, 128, 128, 0.75);
+    padding: 15px 15px 70px 15px;
+   
+}
+
+img {
+    max-width: 95%;
+    border: 1px solid rgb(128, 128, 128, 0.75);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);   
+}
+
+strong {
+    font-size: 32px;
+}
+
+.main-container {
+    width: 50%;
+    margin: 0 auto;
+}

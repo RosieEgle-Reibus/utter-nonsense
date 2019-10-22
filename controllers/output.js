@@ -75,13 +75,9 @@ outputRouter.get('/output', (req, res) => {
         picturesApi.getAllPictures()
     ])
     .then(([allWords, allPictures]) => {
-        console.log( allWords, allPictures)
+        //console.log( allWords, allPictures)
         res.render('output/output', {allWords, allPictures})
-        
     })
-    // .then(([allPictures]) => {
-    //     res.render('output/output', {allPictures})  
-    // })
 })
 
 

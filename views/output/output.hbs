@@ -1,14 +1,54 @@
 {{!-- <p>{{allWords.mammal}}</p> --}}
 
-{{#each allWords}}
+{{!-- {{#each allWords}}
 <p>{{object}}</p>
 <p>{{mammal}}</p>
+<p>{{verb}}</p>
 {{/each}}
 
 
 {{#each allPictures}}
-<p>{{object}}</p>
-<p>{{mammal}}</p>
-{{/each}}
+<img src="{{object}}">
+<img src="{{mammal}}">
+{{/each}} --}}
 
+<div class="main-container">
+<h1>Murder! It has occured!</h1>
+<div class="img-container">
+<div class="polaroid">
+{{#each allPictures}}
+<img src="{{destination}}">
+{{/each}}
+</div>
+</div>
+<p>The murdery murderer {{#each allWords}}<strong>{{verb}}</strong>{{/each}} into the beautiful place pictured above which was where the {{#each allWords}}<strong>{{number}}</strong>{{/each}} poor victims died.</p>
+<h2>The murder weapon:</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each allPictures}}
+<img src="{{object}}">
+{{/each}}
+</div>
+</div>
+<p>Although a {{#each allWords}}<strong>{{object}}</strong>{{/each}} was also found at the scene.  Who knows what the {{#each allWords}}<strong>{{adjective}}</strong>{{/each}} murdery murderer used it for.</p>
+<h2>The victims:</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each allPictures}}
+<img src="{{mammal}}">
+{{/each}}
+</div>
+</div>
+<p> Were surrounded by a murder of crows as well as a {{#each allWords}}<strong>{{mammal}}</strong>{{/each}}.  Prehaps the innocent {{#each allWords}}<strong>{{mammal}}</strong>{{/each}} had something to do with the demise of the victims.  We may never understand what truly happened here.</p>
+
+</div>
+
+
+{{!-- <h1>Nature is Amazing!</h1>
+<img src=destination>
+<p> I was in the nature(pictured above), the other <strong>picture-date</strong></p>
+<p> I was blown away by how <strong>word-adjective</strong>> nature is.  I saw a whole gaggle of <strong>word-object</strong>just running free in the wild.</p>
+<p> The beautiful <strong>word-mammal</strong>pictured below</p>
+<p> <strong>past tense verb</strong> in it's natural habitat and I caught it on film!</p>
+<p>Amazing!</p> --}}
 
