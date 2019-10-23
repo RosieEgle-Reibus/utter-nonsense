@@ -5,69 +5,12 @@ const themesApi = require('../models/themes.js')
 const wordsApi = require('../models/words.js')
 
 const outputRouter = express.Router()
+let allItems= {}
 
+const deleteAllItems =(objectOfItems) => {
+    
+}
 
-// outputRouter.get('/output', (req, res) => {
-//     wordsApi.getAllWords()
-//     .then((allWords) => {
-//         res.json(allWords)
-//     })
-// })
-// outputRouter.get('/output', (req, res) => {
-//     picturesApi.getAllPictures()
-//     .then((allPictures) => {
-//         res.json(allPictures)
-//     })
-// })
-// outputRouter.get('/output', (req, res) => {
-//     wordsApi.getAllWords()
-//     .then((allWords) => {
-//         res.json(allWords)  
-//     })
-//     picturesApi.getAllPictures()
-//         .then((allPictures) => {
-//             res.json(allPictures)
-//         })
-
-// })
-// outputRouter.get('/output', (req, res) => {
-//     Promise.all([
-//         wordsApi.getAllWords(),
-//         picturesApi.getAllPictures()
-//     ])
-//     .then(allWordsAndPics => {
-//         res.json(
-//             allWordsAndPics[1].values()
-//         )
-//     })
-// })
-// outputRouter.get('/output', (req, res) => {
-//     Promise.all([
-//         wordsApi.getAllWords(),
-//         picturesApi.getAllPictures()
-//     ])
-//     .then(([allWords, allPictures]) => {
-//         res.json({
-//             allWords: allWords[0].mammal,
-//             allPictures
-//         })
-//     })
-// })
-
-
-// //This one works yay!!!
-// outputRouter.get('/output', (req, res) => {
-//     Promise.all([
-//         wordsApi.getAllWords(),
-//         picturesApi.getAllPictures()
-//     ])
-//     .then(([allWords, allPictures]) => {
-//         res.json([
-//             allWords[0],
-//             allPictures[0]
-//         ])
-//     })
-// })
 
 //get master create form
 outputRouter.get('/', (req, res) => {
@@ -117,12 +60,13 @@ outputRouter.get('/output/writein', (req, res) => {
         themesApi.getAllThemes()
     ])
         .then(([allWords, allPictures, allThemes]) => {
+            allItems = { allWords, allPictures, allThemes }
             //console.log( allWords, allPictures)
             res.render('output/writeInTheme', { allWords, allPictures, allThemes })
         })
 })
 
-//create ALL schemas with master form
+//create All schemas with master form
 outputRouter.post('/output', (req, res) => {
     Promise.all([
         wordsApi.createWord(req.body),
@@ -143,6 +87,14 @@ outputRouter.post('/output', (req, res) => {
         })
 })
 
+outputRouter.get('/master/edit', (req, res) => {
+    res.render('output/updateAllSchemaForm')
+})
+
+outputRouter.delete('/output/murder', (req, res) => {
+    allItems = {}
+    res.redirect('/', )
+})
 
 module.exports = {
     outputRouter
