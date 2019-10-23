@@ -5,12 +5,6 @@ const themesApi = require('../models/themes.js')
 const wordsApi = require('../models/words.js')
 
 const outputRouter = express.Router()
-let allItems= {}
-
-const deleteAllItems =(objectOfItems) => {
-    
-}
-
 
 //get master create form
 outputRouter.get('/', (req, res) => {
@@ -91,10 +85,19 @@ outputRouter.get('/master/edit', (req, res) => {
     res.render('output/updateAllSchemaForm')
 })
 
-outputRouter.delete('/output/murder', (req, res) => {
-    allItems = {}
-    res.redirect('/', )
+outputRouter.delete('/output', (req, res) => {
+ Promise.all([
+     wordsApi.deleteAllWord(req.body),
+     picturesApi.deleteAllPicture(req.body),
+     themesApi.deleteAllTheme(req.body)
+ ])
+ .then(([deletedAllWord, deletedAllPicture, deletedAllTheme]) => {
+     res.redirect('/')
+ })
+  
 })
+
+
 
 module.exports = {
     outputRouter
