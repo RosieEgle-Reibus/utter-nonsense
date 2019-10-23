@@ -33,6 +33,11 @@ const deleteTheme = (id) => {
     return themeCollection.deleteOne({_id: id})
 }
 
+//deleteAll
+const deleteAllTheme = (themeData) => {
+    return themeCollection.deleteMany(themeData)
+}
+
 
 
 
@@ -41,5 +46,6 @@ module.exports = {
    getOneTheme,
    createTheme,
    updateTheme,
-   deleteTheme
+   deleteTheme,
+   deleteAllTheme
   }

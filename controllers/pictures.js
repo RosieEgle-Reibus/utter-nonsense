@@ -63,6 +63,14 @@ picturesRouter.delete('/picture/:id', (req, res) => {
     })
 })
 
+//deleteAll
+picturesRouter.delete('/picture', (req, res) => {
+    picturesApi.deleteAllPicture(req.body) 
+    .then((deletedPictures) => {
+        res.redirect('/picture/new')
+    })
+})
+
 
 module.exports = {
     picturesRouter

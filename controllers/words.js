@@ -62,6 +62,14 @@ wordsRouter.delete('/word/:id', (req, res) => {
   })
 })
 
+//deleteMany
+wordsRouter.delete('/word', (req, res) => {
+  wordsApi.deleteAllWord(req.body)
+  .then((deletedWords) => {
+    res.redirect('/word/new')
+  })
+})
+
 module.exports = {
   wordsRouter
 }

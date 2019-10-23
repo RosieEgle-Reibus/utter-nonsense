@@ -63,6 +63,15 @@ themesRouter.delete('/theme/:id', (req, res) => {
     })
 })
 
+//deleteAll 
+themesRouter.delete('/theme', (req, res) => {
+    themesApi.deleteAllTheme(req.body)
+    .then((deletedThemes) => {
+        res.redirect('/theme/new')
+    })
+})
+
+
 module.exports = {
     themesRouter
   }

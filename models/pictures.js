@@ -35,10 +35,16 @@ const deletePicture = (id) => {
     return pictureCollection.deleteOne({_id: id})
 }
 
+//deleteAll
+const deleteAllPicture = (pictureData => {
+    return pictureCollection.deleteMany(pictureData)
+})
+
 module.exports = {
     getAllPictures,
     getOnePicture,
     createPicture,
     updatePicture,
-    deletePicture
+    deletePicture,
+    deleteAllPicture
   }

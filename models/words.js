@@ -38,10 +38,16 @@ const deleteWord = (id) => {
   return wordCollection.deleteOne({_id: id})
 }
 
+//delete many
+const deleteAllWord = (wordData => {
+  return wordCollection.deleteMany(wordData)
+})
+
 module.exports = {
   getAllWords,
   getOneWord,
   createWord,
   updateWord,
-  deleteWord
+  deleteWord,
+  deleteAllWord
 }
