@@ -82,7 +82,14 @@ outputRouter.post('/output', (req, res) => {
 })
 
 outputRouter.get('/master/edit', (req, res) => {
-    res.render('output/updateAllSchemaForm')
+    Promise.all([
+        wordsApi.getOneWord(req.params.id),
+        // picturesApi.getOnePicture(req.params.id),
+        //  themesApi.getOneTheme(req.params.id)
+    ])
+    .then(([singleWord, singlePicture, singleTheme]) => {
+        res.render('output/updateAllSchemaForm', singleWord)
+    })
 })
 
 outputRouter.delete('/output', (req, res) => {
@@ -94,8 +101,12 @@ outputRouter.delete('/output', (req, res) => {
  .then(([deletedAllWord, deletedAllPicture, deletedAllTheme]) => {
      res.redirect('/')
  })
-  
 })
+// outputRouter.get('/word/edit/:id', (req, res) => {
+//     wordsApi.getOneWord(req.params.id)
+//     .then((singleWordSet))
+//     res.render('words/editSetForm', singleWordSet)
+// })
 
 
 

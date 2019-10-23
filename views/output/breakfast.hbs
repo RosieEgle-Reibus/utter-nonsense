@@ -1,14 +1,39 @@
 
 <div class="main-container">
-<h1>Breakfast the most {{#each allWords}}<em>{{adjective}}</em>{{/each}} meal of the day!</h1>
-<h2>My favorite way to start the day is with a big bowl of:</h2>
+<h1>Breakfast:</h1>
+<h1>The most {{#each allWords}}<strong>{{adjective}}</strong>{{/each}} meal of the day!</h2>
+<p>My favorite way to start the day is with a big bowl of:</h1>
 <div class="img-container">
 <div class="polaroid">
 {{#each allPictures}}
 <img src="{{destination}}">
 {{/each}}
+<h2>#crunch</h2>
 </div>
 </div>
+<p> I love eating a {{#each allWords}}<strong>{{animal}}</strong>{{/each}} steak biscuit covered in gravy with a side of grits and {{#each allWords}}<strong>{{thing}}s</strong>{{/each}}.</p>
+<h2>Here is a picture of my last meal:</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each allPictures}}
+<img src="{{mammal}}">
+{{/each}}
+<h2>#yuminthetum</h2>
+</div>
+</div>
+<h2>Soooo delish!</h2>
+<p> I am a self-proclaimed foodie and so every day for the last year I have {{#each allWords}}<strong>{{verb}}</strong>{{/each}} at breakfast.</p>
+<p>I saw this picture in a restaurants brunch menu:</p>
+<div class="img-container">
+<div class="polaroid">
+{{#each allPictures}}
+<img src="{{object}}">
+{{/each}}
+<h2>#icantbelievethisisfood</h2>
+</div>
+</div>
+<p>And my mouth has a date with it next weekend! Yay!</p>
+
 <a href="/output/murder">
 <button>Murder Theme</button>
 </a>

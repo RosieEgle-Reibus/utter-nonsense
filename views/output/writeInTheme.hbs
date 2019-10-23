@@ -1,8 +1,18 @@
 
 <div class="main-container">
-<h1>I have no idea what "{{#each allThemes}}<strong>{{writeInTheme}}</strong>{{/each}}"" even is!</h1>
+<h1>I have no idea what "{{#each allThemes}}<strong>{{writeInTheme}}</strong>{{/each}}" even is!</h1>
 
 <p>So I'm going to tell you a story about the time I met a puppy instead.</p>
+
+<h2>Look at this adorbale dog!</h2>
+<div class="img-container">
+<div class="polaroid">
+{{#each allPictures}}
+<img src="{{mammal}}">
+{{/each}}
+</div>
+</div>
+<p>She kept wagging her tail this way and that, begging for a {{#each allWords}}<strong>{{thing}}</strong>{{/each}}</p>
 
 <a href="/output/murder">
 <button>Murder Theme</button>

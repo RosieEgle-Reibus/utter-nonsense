@@ -39,7 +39,7 @@
 {{/each}}
 </div>
 </div>
-<p> Were surrounded by a murder of crows as well as a {{#each allWords}}<strong>{{animal}}</strong>{{/each}}.  Perhaps the innocent {{#each allWords}}<strong>{{mammal}}</strong>{{/each}} had something to do with the demise of the victims.  We may never understand what truly happened here.</p>
+<p> Were surrounded by a murder of crows as well as a {{#each allWords}}<strong>{{animal}}</strong>{{/each}}.  Perhaps the innocent {{#each allWords}}<strong>{{animal}}</strong>{{/each}} had something to do with the demise of the victims.  We may never understand what truly happened here.</p>
 
 <a href="/output/nature">
 <button>Nature Theme</button>
@@ -50,15 +50,7 @@
 <form action="/output?_method=DELETE" method="POST">
 <input type="submit" value="Delete All"/>
 </form>
-
+<a href="/word/edit/{{#each allWords}}{{_id}}{{/each}}">
+<button>Edit Word Set</button>
+</a>
 </div>
-
-
-{{!-- <h1>Nature is Amazing!</h1>
-<img src=destination>
-<p> I was in the nature(pictured above), the other <strong>picture-date</strong></p>
-<p> I was blown away by how <strong>word-adjective</strong>> nature is.  I saw a whole gaggle of <strong>word-object</strong>just running free in the wild.</p>
-<p> The beautiful <strong>word-mammal</strong>pictured below</p>
-<p> <strong>past tense verb</strong> in it's natural habitat and I caught it on film!</p>
-<p>Amazing!</p> --}}
-
