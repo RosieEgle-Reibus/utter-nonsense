@@ -5,8 +5,38 @@ body {
     font-family: 'Anton', sans-serif;
 }
 .main-container {
-    width: 50%; 
+    padding: 30px;
+    width: 50%;
+    margin-top: 15px;
+    
 }
+header  {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+.header-container {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.utter {
+    margin: 0, auto;
+    font-family: 'Niconne', cursive;
+    font-size: 70px;
+    color: white;
+    letter-spacing: 2px;
+}
+.nonsense {
+    font-size: 90px;
+    background-color: blue;
+    padding: 15px;
+    background-color: white;
+    border: 5px solid black; 
+}
+
 
 .img-container {
     display: flex;
@@ -24,6 +54,7 @@ body {
 }
 h1 {
     font-size: 60px;
+    margin: 0 auto;
 }
 img {
     max-width: 95%;
