@@ -35,33 +35,49 @@
 </div>  
 </div>
 <div class="form-section">
-<h1>Pick Your Picture</h1>
+<h1>Pick Your Pictures</h1>
 <div class="word-container">
-    <input type="text" name="set" placeholder="Name Your Set" />
-    <input type="text" name="destination" placeholder="Any place you can think of" />
-    <input type="text" name="mammal" placeholder="Any mammal you can think of" />
-    <input type="text" name="object" placeholder="Any Object you can think of" />
-    <input type="date" name="dateTaken" placeholder="Make up a date the pictures were taken" />
+    <p class="small"><em>Please Paste The Image's URL</em></p>
+    <div class="input-container">
+    <label for="destination">Image of any PLACE you can think of</label>
+    <input type="text" name="destination" placeholder="Place Image URL"/>
+    </div>
+    <div class="input-container">
+    <label for="mammal">Image of any MAMMAL you can think of</label>
+    <input type="text" name="mammal" placeholder="Mammal Image URL" />
+    </div>
+    <div class="input-container">
+    <label for="object">Image of any OBJECT you can think of</label>
+    <input type="text" name="object" placeholder="Object Image URL" />
+    </div>
+    <div class="input-container">
+    <label for="date">Pick the funniest date you can think of</label>
+    <input type="date" name="dateTaken"/>
+    </div>
 
 </div>
  </div>   
  <div class="form-section"> 
 <h1>Select a Theme</h1>
 <div class="word-container">
-    <select name="dropDownTheme">
+    <div class="input-container">
+    <select name="dropDownTheme" class="no-shadow">
         <option></option>
         <option value="nature">Nature</option>
         <option value="breakfast">Breakfast</option>
         <option value="murder-y">Murder-y</option>
     </select>
-    <p>Or Try your luck at creating your own theme</p>
-    <input type="text" name="writeInTheme" placeholder="Make up your own theme" />
     </div>
-    <input type="submit" value="Generate The NONSENSE!" />
+    <div class="input-container">
+    <label for="writeInTheme">Or Try your luck creating your own theme</label>
+    <input type="text" name="writeInTheme" placeholder="Your own theme" />
+    </div>
 </div>
+<div class="submit">
+ <input type="submit" value="Generate The NONSENSE" />
+ </div>
 </form>
 </div>
 
 
  
-
