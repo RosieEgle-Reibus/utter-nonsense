@@ -4,6 +4,6 @@
 
 [Heroku](https://project-two-rose-egle.herokuapp.com/ )
 
-[Wireframe](wireframe.jpg)
+![Wireframe](wireframe.jpg)
 
-[ERD](ERD.jpg) 
+![ERD](ERD.jpg) 
