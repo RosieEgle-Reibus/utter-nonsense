@@ -3,18 +3,24 @@ body {
     font-size: 24px;
     margin: 0 auto;
     font-family: 'Anton', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
 }
 .main-container {
-    padding: 30px;
     width: 50%;
-    margin-top: 15px;
-    
+    margin: 0 auto;
+    padding: 30px;
 }
 header  {
     text-align: center;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;    
+}
+.blank {
+    color: white;
+    border-bottom: 2px solid black;
 }
 .header-container {
     max-width: 50%;
@@ -37,13 +43,12 @@ header  {
     border: 5px solid black; 
 }
 
-
 .img-container {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-}
+    margin: 20px auto;
 
+}
 .polaroid {
     max-width: 65%;
     background-color: rgb(240, 240, 240);
@@ -65,9 +70,55 @@ img {
 strong {
     font-size: 32px;
 }
-
-.main-container {
-    width: 50%;
-    margin: 0 auto;
+.form-all {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
 }
+.form-section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+.word-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 5px solid black; 
+    padding: 15px;
+}
+.picture-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 5px solid black; 
+    padding: 15px;
+}
+
+input[type=text], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=number], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=date], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 

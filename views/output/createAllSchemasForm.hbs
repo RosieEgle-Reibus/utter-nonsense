@@ -5,30 +5,49 @@
 <h1 class="nonsense">NONSENSE</h1>
 </header>
 </div>
-<h2>Welcome to the most <span class="blank">BLANK</span>  you can have on the internet!</h2>
-<div class="word-container">
-<h1>Pick Your Words</h1>
+<h3>Welcome to the most <span class="blank">BLANK</span>  you can have on the internet !</h3>
+<div class="form-all">
+<div class="form-section">
 <form action="/output" method="POST">
+
+<h1>Pick Your Words</h1>
+<div class="word-container">
+    <div class="input-container">
     <label for="animal">Any ANIMAL you can think of</label>
     <input type="text" name="animal" placeholder="Animal" />
+    </div>
+    <div class="input-container">
     <label for="thing">Any THING you can think of </label>
     <input type="text" name="thing" placeholder="Thing" />
+    </div>
+    <div class="input-container">
     <label for="verb">Past Tense VERB Please </label>
     <input type="text" name="verb" placeholder="Verb" />
+    </div>
+    <div class="input-container">
     <label for="verb">Any ADJECTIVE you can think of</label>
     <input type="text" name="adjective" placeholder="Adjective"/>
-    <label for="Number">Any NUMBER you can think of(pick a funny one)</label>
+    </div>
+    <div class="input-container">
+    <label for="Number">Any NUMBER you can think of ( pick a funny one! )</label>
     <input type="number" name="number" placeholder="Number" />
+    </div>
 </div>  
-<h1>Create New Picture Set</h1>
-
+</div>
+<div class="form-section">
+<h1>Pick Your Picture</h1>
+<div class="word-container">
     <input type="text" name="set" placeholder="Name Your Set" />
     <input type="text" name="destination" placeholder="Any place you can think of" />
     <input type="text" name="mammal" placeholder="Any mammal you can think of" />
     <input type="text" name="object" placeholder="Any Object you can think of" />
     <input type="date" name="dateTaken" placeholder="Make up a date the pictures were taken" />
-   
+
+</div>
+ </div>   
+ <div class="form-section"> 
 <h1>Select a Theme</h1>
+<div class="word-container">
     <select name="dropDownTheme">
         <option></option>
         <option value="nature">Nature</option>
@@ -37,7 +56,12 @@
     </select>
     <p>Or Try your luck at creating your own theme</p>
     <input type="text" name="writeInTheme" placeholder="Make up your own theme" />
-    <input type="submit" value="Create it!" />
+    </div>
+    <input type="submit" value="Generate The NONSENSE!" />
+</div>
 </form>
 </div>
+
+
+ 
 
