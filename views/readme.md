@@ -6,4 +6,4 @@
 
 [Wireframe](wireframe.jpg)
 
-[ERD](ERD.jpg)
+[ERD](ERD.jpg) 
