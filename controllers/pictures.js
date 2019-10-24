@@ -1,4 +1,5 @@
 const express = require('express')
+const moment =  require('moment')
 
 const picturesApi = require('../models/pictures.js')
 
@@ -75,3 +76,9 @@ picturesRouter.delete('/picture', (req, res) => {
 module.exports = {
     picturesRouter
   }
+
+
+//   const newDate =  moment(req.body.dateTaken, "MM DD YYYY").toDate()
+//   req.body.dateTaken = newDate
+//   const newDateStr = moment(singlePicture.dateTaken).format("MM DD YYYY")
+//         singlePicture.dateTaken = newDateStr

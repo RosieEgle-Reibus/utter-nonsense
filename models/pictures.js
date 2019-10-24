@@ -5,7 +5,7 @@ const PictureSchema = new mongoose.Schema({
     destination: String,
     mammal: String,
     object: String,
-    dateTaken: Date,
+    dateTaken: String,
 })
 
 const pictureCollection = mongoose.model('Picture', PictureSchema)

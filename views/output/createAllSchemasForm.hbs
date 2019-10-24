@@ -4,19 +4,22 @@
 <h1 class="utter">Utter</h1>
 <h1 class="nonsense">NONSENSE</h1>
 </header>
-<h2>Welcome to the most BLANK you can have on the internet!</h2>
 </div>
-
-
-<h1>Create New Word Set</h1>
+<h2>Welcome to the most <span class="blank">BLANK</span>  you can have on the internet!</h2>
+<div class="word-container">
+<h1>Pick Your Words</h1>
 <form action="/output" method="POST">
-    <input type="text" name="setWord" placeholder="Name this set of words" />
-    <input type="text" name="animal" placeholder="Any mammal you can think of" />
-    <input type="text" name="thing" placeholder="Any object you can think of" />
-    <input type="text" name="verb" placeholder="Past tense verb" />
-    <input type="text" name="adjective" placeholder="Any adjective you can think of" />
-    <input type="number" name="number" placeholder="Any number you can think of" />
-    
+    <label for="animal">Any ANIMAL you can think of</label>
+    <input type="text" name="animal" placeholder="Animal" />
+    <label for="thing">Any THING you can think of </label>
+    <input type="text" name="thing" placeholder="Thing" />
+    <label for="verb">Past Tense VERB Please </label>
+    <input type="text" name="verb" placeholder="Verb" />
+    <label for="verb">Any ADJECTIVE you can think of</label>
+    <input type="text" name="adjective" placeholder="Adjective"/>
+    <label for="Number">Any NUMBER you can think of(pick a funny one)</label>
+    <input type="number" name="number" placeholder="Number" />
+</div>  
 <h1>Create New Picture Set</h1>
 
     <input type="text" name="set" placeholder="Name Your Set" />
@@ -37,3 +40,4 @@
     <input type="submit" value="Create it!" />
 </form>
 </div>
+

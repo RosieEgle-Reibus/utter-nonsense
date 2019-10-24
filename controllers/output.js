@@ -1,10 +1,14 @@
 const express = require('express')
 
+
 const picturesApi = require('../models/pictures.js')
 const themesApi = require('../models/themes.js')
 const wordsApi = require('../models/words.js')
 
 const outputRouter = express.Router()
+
+
+
 
 //get master create form
 outputRouter.get('/', (req, res) => {
